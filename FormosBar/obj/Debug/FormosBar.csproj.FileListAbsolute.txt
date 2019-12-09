@@ -207,3 +207,6 @@ C:\Users\whwong\Desktop\QNAP Qsync\Plymouth - DB\Project\FormosBar\FormosBar\obj
 C:\Users\whwong\Desktop\QNAP Qsync\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.dll
 C:\Users\whwong\Desktop\QNAP Qsync\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.pdb
 C:\Users\whwong\Desktop\QNAP Qsync\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.csprojAssemblyReference.cache
+C:\Users\whwong\Desktop\QNAP Qsync\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.Migrations.InitialCreate.resources
+C:\Users\whwong\Desktop\QNAP Qsync\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.csproj.GenerateResource.cache
+C:\Users\whwong\Desktop\QNAP Qsync\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.Migrations.fiert.resources
