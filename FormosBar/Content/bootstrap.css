@@ -3315,19 +3315,20 @@ input[type="search"] {
 
 .form-group {
     margin-bottom: 15px;
+    align-content: center;
 }
 
 .radio,
 .checkbox {
     position: relative;
     display: block;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 10px;
 }
 
     .radio label,
     .checkbox label {
-        min-height: 20px;
+        min-height: 10px;
         padding-left: 20px;
         margin-bottom: 0;
         font-weight: normal;
