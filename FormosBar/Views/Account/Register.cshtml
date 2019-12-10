@@ -4,9 +4,68 @@
 }
 
 <h2>@ViewBag.Title.</h2>
+<div class="container">
+    <section id="registerform">
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+        <div id="signupbox" style="margin-top:50px" class="mainbox col-md-5 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">Sign Up</div>
+                    <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="./Login" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <form id="signupform" class="form-horizontal" role="form">
+                    <div>@Html.ValidationSummary("", new { @class = "text-danger" })</div>
+                    <div class="form-group">
+                        <label for="Username" class="col-md-5 control-label">Username</label>
+                        <div class="col-md-7">
+                            @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Password" class="col-md-5 control-label">Password</label>
+                        <div class="col-md-7">
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ConfirmPassword" class="col-md-5 control-label">Confirm Password</label>
+                        <div class="col-md-7">
+                            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email" class="col-md-5 control-label">Email</label>
+                        <div class="col-md-7">
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="UserRole" class="col-md-5 control-label">User Role</label>
+                        <div class="col-md-7" style="padding-top:7px;">
+                            @Html.RadioButtonFor(m => m.UserRole, "Customer", new { @class = "radio-inline" , @checked = true })@Html.Label(" Customer")
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <!-- Button -->
+                        <div class="col-md-offset-5 col-md-9">
+                            <input type="submit" class="btn btn-info" value="Register" />
+                            <input type="reset" class="btn btn-danger" value="Clear" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        }
+    </section>
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-{
+</div>
+
+@*@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+
     @Html.AntiForgeryToken()
     <h4>Create a new account.</h4>
     <hr />
@@ -45,8 +104,7 @@
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" class="btn btn-default" value="Register" />
         </div>
-    </div>
-}
+    </div>*@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
