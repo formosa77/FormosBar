@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title | FormosBar - Chill & Full</title>
+
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink(" ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+<footer class="navbar-fixed-bottom" style="padding:0px; margin:0; position:fixed; bottom:0">
+        <div class="modal-footer">
+            <div class="footer-container-left">&copy; @DateTime.Now.Year FormosBar. &emsp; |&emsp; Privacy Policy&emsp; |&emsp; Terms of Use&emsp;|&emsp;Accessibility Statement&emsp;|</div>
+            <div class="footer-container-right">
+                <b><font color="#b6ff00">Follow Us <i class="glyphicon glyphicon-chevron-right"></i></font></b>&nbsp; 
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+            </div>
+            <div class="footer-container-slogan">    
+                <img src="~/Content/img/Slogan.png" style="max-width: 150px;" />
+            </div>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
