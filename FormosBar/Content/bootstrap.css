@@ -1444,6 +1444,11 @@ img {
     vertical-align: middle;
 }
 
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
@@ -6145,13 +6150,15 @@ a.badge:focus {
     padding-top: 30px;
     padding-bottom: 30px;
     margin-bottom: 30px;
-    color: inherit;
-    background-color: #eee;
+    background-image: url("../Content/img/jumbotron.jpg");
+    background-size: cover;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
     .jumbotron h1,
     .jumbotron .h1 {
-        color: inherit;
+        text-align: center;
+        color: #000;
     }
 
     .jumbotron p {
@@ -6173,6 +6180,7 @@ a.badge:focus {
 
 .jumbotron .container {
     max-width: 100%;
+    background: rgba(225, 230, 238, 0.6);
 }
 
 @media screen and (min-width: 768px) {
