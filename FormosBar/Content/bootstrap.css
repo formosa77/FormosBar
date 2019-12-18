@@ -6162,9 +6162,12 @@ a.badge:focus {
     }
 
     .jumbotron p {
+        margin-top: 25px;
         margin-bottom: 15px;
-        font-size: 21px;
-        font-weight: 200;
+        color: black;
+        text-shadow: -0.25px 0 orange, 0 0.25px orange, 0.25px 0 orange, 0 -0.25px orange;
+        font-size: 22px;
+        font-weight: 500;
     }
 
     .jumbotron > hr {
@@ -8345,5 +8348,7 @@ button.close {
     background: #bb0000;
     color: white;
 }
+
+
 
 /*# sourceMappingURL=bootstrap.css.map */
