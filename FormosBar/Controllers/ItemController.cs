@@ -11,7 +11,7 @@ using FormosBar.Models;
 
 namespace FormosBar.Controllers
 {
-    [Authorize]
+  
     public class ItemController : Controller
     {
         private BarContext db = new BarContext();

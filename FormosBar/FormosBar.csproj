@@ -176,15 +176,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201912090145274_InitialCreate.cs" />
-    <Compile Include="Migrations\201912090145274_InitialCreate.designer.cs">
-      <DependentUpon>201912090145274_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\ContextA\201912190153021_Init.cs" />
+    <Compile Include="Migrations\ContextA\201912190153021_Init.designer.cs">
+      <DependentUpon>201912190153021_Init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201912090729523_fiert.cs" />
-    <Compile Include="Migrations\201912090729523_fiert.designer.cs">
-      <DependentUpon>201912090729523_fiert.cs</DependentUpon>
+    <Compile Include="Migrations\ContextA\ConfigA.cs" />
+    <Compile Include="Migrations\ContextB\201912090150230_InitialCreate.cs" />
+    <Compile Include="Migrations\ContextB\201912090150230_InitialCreate.designer.cs">
+      <DependentUpon>201912090150230_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\ContextB\201912190205411_test.cs" />
+    <Compile Include="Migrations\ContextB\201912190205411_test.designer.cs">
+      <DependentUpon>201912190205411_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ContextB\ConfigB.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Item.cs" />
@@ -264,11 +269,14 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201912090145274_InitialCreate.resx">
-      <DependentUpon>201912090145274_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\ContextA\201912190153021_Init.resx">
+      <DependentUpon>201912190153021_Init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201912090729523_fiert.resx">
-      <DependentUpon>201912090729523_fiert.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\ContextB\201912090150230_InitialCreate.resx">
+      <DependentUpon>201912090150230_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ContextB\201912190205411_test.resx">
+      <DependentUpon>201912190205411_test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
