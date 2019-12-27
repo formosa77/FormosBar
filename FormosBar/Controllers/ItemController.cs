@@ -1,129 +1,116 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
 using System.Linq;
-using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using FormosBar.DAL;
-using FormosBar.Models;
 
 namespace FormosBar.Controllers
 {
-  
     public class ItemController : Controller
     {
-        private BarContext db = new BarContext();
-
         // GET: Item
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
-            return View(db.Items.ToList());
+            //echo the Item List
+            List<Models.Item> result = new List<Models.Item>();
+
+            //handle the message
+            ViewBag.Message = TempData["Message"];
+
+            using (DAL.BarContext db = new DAL.BarContext())
+            {
+                result = (from s in db.Items select s).ToList();
+                return View(result);
+            }
         }
 
-        // GET: Item/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Item item = db.Items.Find(id);
-            if (item == null)
-            {
-                return HttpNotFound();
-            }
-            return View(item);
-        }
-
-        // GET: Item/Create
+        //Create Item
+        [Authorize(Roles ="Admin")]
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Item/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        //Create Item Page - Data Post Back
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name")] Item item)
+        [Authorize(Roles = "Admin")]
+        public ActionResult Create(Models.Item postback)
         {
-            if (ModelState.IsValid)
+            if (this.ModelState.IsValid)
             {
-                db.Items.Add(item);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+                using (DAL.BarContext db = new DAL.BarContext())
+                {
+                    //Post back data and add to Item table
+                    db.Items.Add(postback);
 
-            return View(item);
+                    //Save Change
+                    db.SaveChanges();
+
+                    //Item Create Sucessfully 
+                    TempData["Message"] = String.Format("Item[{0}] is created", postback.Name);
+
+                    return RedirectToAction("Index");
+                }
+            }
+            else {
+                ViewBag.Message = "The data entry is not correct.";
+                return View(postback);
+            }
+            
         }
 
-        // GET: Item/Edit/5
-        public ActionResult Edit(int? id)
+        //Edit Item Page
+        [Authorize(Roles = "Admin")]
+        public ActionResult Edit(int id)
         {
-            if (id == null)
+            using (DAL.BarContext db = new DAL.BarContext())
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                //Catch Item.Id as Entry
+                var result = (from s in db.Items where s.Id == id select s).FirstOrDefault();
+                //verify the id
+                if (result != default(Models.Item)) 
+                {
+                    return View(result); 
+                }
+                else
+                {   //If no data is found, direct to Index
+                    TempData["Message"] = "Please Input Again";
+                    return RedirectToAction("Index");
+                }
             }
-            Item item = db.Items.Find(id);
-            if (item == null)
-            {
-                return HttpNotFound();
-            }
-            return View(item);
         }
 
-        // POST: Item/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        //Edit Item Page
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name")] Item item)
+        [Authorize(Roles = "Admin")]
+        public ActionResult Edit(Models.Item postback)
         {
-            if (ModelState.IsValid)
+            //verify the user input
+            if (this.ModelState.IsValid) 
             {
-                db.Entry(item).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(item);
-        }
+                using (DAL.BarContext db = new DAL.BarContext())
+                {
+                    //catch Item.Id and postback the data of Id
+                    var result = (from s in db.Items where s.Id == postback.Id select s).FirstOrDefault();
 
-        // GET: Item/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Item item = db.Items.Find(id);
-            if (item == null)
-            {
-                return HttpNotFound();
-            }
-            return View(item);
-        }
+                    //Save the change into Database
+                    result.Name = postback.Name; result.Price = postback.Price;
+                    result.Description = postback.Description; result.OnShelf = postback.OnShelf;
+                    result.DefaultImageURL = postback.DefaultImageURL; result.Category = postback.Category;
 
-        // POST: Item/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Item item = db.Items.Find(id);
-            db.Items.Remove(item);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+                    //Save the change
+                    db.SaveChanges();
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
+                    //Pop-up "edit successfully" msg and direct to Index
+                    TempData["Message"] = String.Format("Item [{0}] is edited ", postback.Name);
+                    return RedirectToAction("Index");
+                }
             }
-            base.Dispose(disposing);
+            else
+            {
+                return View(postback);
+            }
         }
     }
 }

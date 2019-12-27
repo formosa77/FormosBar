@@ -1,33 +1,38 @@
-﻿@model IEnumerable<FormosBar.Models.Item>
+﻿@model List<FormosBar.Models.Item>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Product List</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
+@*Pop-up message if necessary*@
+@if (ViewBag.Message != null)
+{
+    @Html.Label("info",(string)ViewBag.Message, new { @class = "text-info"})
 }
 
+<div>
+    @Html.ActionLink("Create", "Create", new { }, new { @class = "btn btn-default" })
+</div>
+
+<table class="table">
+    <thead><tr><td>Opeartion</td><td>Item ID</td><td>Category</td><td>Item Name</td><td>Description<td>Price</td><td>On Shelf?</td></tr></thead>
+    <tbody>
+        @foreach (var pd in this.Model) 
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = pd.Id }, new { @class = "btn btn-default" })
+                </td>
+                <td>@pd.Id</td>
+                <td>@pd.Category</td>
+                <td>@pd.Name</td>
+                <td>@pd.Description</td>
+                <td>@pd.Price</td>
+                <td>@pd.OnShelf</td>
+            </tr>
+        }
+    </tbody>
 </table>
+

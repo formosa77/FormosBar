@@ -181,13 +181,21 @@
       <DependentUpon>201912190153021_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ContextA\ConfigA.cs" />
-    <Compile Include="Migrations\ContextB\201912090150230_InitialCreate.cs" />
-    <Compile Include="Migrations\ContextB\201912090150230_InitialCreate.designer.cs">
-      <DependentUpon>201912090150230_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\ContextB\201912271637175_initial.cs" />
+    <Compile Include="Migrations\ContextB\201912271637175_initial.designer.cs">
+      <DependentUpon>201912271637175_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\ContextB\201912190205411_test.cs" />
-    <Compile Include="Migrations\ContextB\201912190205411_test.designer.cs">
-      <DependentUpon>201912190205411_test.cs</DependentUpon>
+    <Compile Include="Migrations\ContextB\201912271808375_Item.cs" />
+    <Compile Include="Migrations\ContextB\201912271808375_Item.designer.cs">
+      <DependentUpon>201912271808375_Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ContextB\201912271822203_Item_v2.cs" />
+    <Compile Include="Migrations\ContextB\201912271822203_Item_v2.designer.cs">
+      <DependentUpon>201912271822203_Item_v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ContextB\201912271839405_Item_v3.cs" />
+    <Compile Include="Migrations\ContextB\201912271839405_Item_v3.designer.cs">
+      <DependentUpon>201912271839405_Item_v3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ContextB\ConfigB.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -244,16 +252,15 @@
     <Content Include="Views\Manage\SetPassword.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Item\Create.cshtml" />
-    <Content Include="Views\Item\Delete.cshtml" />
-    <Content Include="Views\Item\Details.cshtml" />
-    <Content Include="Views\Item\Edit.cshtml" />
-    <Content Include="Views\Item\Index.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Shared\_CustomerLayout.cshtml" />
+    <Content Include="Views\Item\Index.cshtml" />
+    <Content Include="Views\Item\Create.cshtml" />
+    <Content Include="Views\Item\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\img\ItemPhotos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -272,11 +279,17 @@
     <EmbeddedResource Include="Migrations\ContextA\201912190153021_Init.resx">
       <DependentUpon>201912190153021_Init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\ContextB\201912090150230_InitialCreate.resx">
-      <DependentUpon>201912090150230_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\ContextB\201912271637175_initial.resx">
+      <DependentUpon>201912271637175_initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\ContextB\201912190205411_test.resx">
-      <DependentUpon>201912190205411_test.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\ContextB\201912271808375_Item.resx">
+      <DependentUpon>201912271808375_Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ContextB\201912271822203_Item_v2.resx">
+      <DependentUpon>201912271822203_Item_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ContextB\201912271839405_Item_v3.resx">
+      <DependentUpon>201912271839405_Item_v3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

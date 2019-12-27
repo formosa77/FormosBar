@@ -310,9 +310,6 @@ C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\bin
 C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.csprojAssemblyReference.cache
-C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.Migrations.InitialCreate.resources
-C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.Migrations.fiert.resources
 C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.csproj.GenerateResource.cache
 C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.csproj.CoreCompileInputs.cache
 C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.csproj.CopyComplete
@@ -427,3 +424,9 @@ C:\Users\whwong\Desktop\QNAP Qsync\Plymouth - DB\Pro\FormosBar\FormosBar\obj\Deb
 C:\Users\whwong\Desktop\QNAP Qsync\Plymouth - DB\Pro\FormosBar\FormosBar\obj\Debug\FormosBar.Migrations.ContextB.InitialCreate.resources
 C:\Users\whwong\Desktop\QNAP Qsync\Plymouth - DB\Pro\FormosBar\FormosBar\obj\Debug\FormosBar.Migrations.ContextA.Init.resources
 C:\Users\whwong\Desktop\QNAP Qsync\Plymouth - DB\Pro\FormosBar\FormosBar\obj\Debug\FormosBar.Migrations.ContextB.test.resources
+C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.Migrations.ContextA.Init.resources
+C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.Migrations.ContextB.initial.resources
+C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.Migrations.ContextB.Item.resources
+C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.Migrations.ContextB.Item_v2.resources
+C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.Migrations.ContextB.Item_v3.resources
+C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.csprojAssemblyReference.cache
