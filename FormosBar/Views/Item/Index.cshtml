@@ -1,7 +1,7 @@
 ﻿@model List<FormosBar.Models.Item>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Product List";
 }
 
 <h2>Product List</h2>
@@ -12,27 +12,43 @@
     @Html.Label("info",(string)ViewBag.Message, new { @class = "text-info"})
 }
 
-<div>
-    @Html.ActionLink("Create", "Create", new { }, new { @class = "btn btn-default" })
+<div style="margin: 10px; margin-left: 28px;">
+    @Html.ActionLink(" Create", "Create", new { }, new { @class = "btn btn-default glyphicon glyphicon-plus-sign" })
 </div>
 
-<table class="table">
-    <thead><tr><td>Opeartion</td><td>Item ID</td><td>Category</td><td>Item Name</td><td>Description<td>Price</td><td>On Shelf?</td></tr></thead>
-    <tbody>
-        @foreach (var pd in this.Model) 
-        {
+<div style="margin-top: 25px;">
+    <table class="table100-head">
+        <thead><tr><th>Opeartion</th><th>Item ID</th><th>Category</th><th>Item Name</th><th>Description<th>Price</th><th>Availability</th></tr></thead>
+        <tbody>
+            @foreach (var pd in this.Model)
+            {
+                //if (pd.OnShelf == true) {
             <tr>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = pd.Id }, new { @class = "btn btn-default" })
+                    @Html.ActionLink(" Edit", "Edit", new { id = pd.Id }, new { @class = "btn btn-default btn-sm glyphicon glyphicon-edit" })
                 </td>
                 <td>@pd.Id</td>
-                <td>@pd.Category</td>
+                @if (pd.Category == "Drink")
+                {
+                    <td><i class="glyphicon glyphicon-glass"></i></td>
+                }
+                else
+                {
+                    <td><i class="fa fa-cutlery"></i></td>
+                }
                 <td>@pd.Name</td>
                 <td>@pd.Description</td>
-                <td>@pd.Price</td>
-                <td>@pd.OnShelf</td>
+                <td>&pound; @pd.Price</td>
+                @if (pd.OnShelf == true)
+                {
+                <td><i class="glyphicon glyphicon-ok" style="color: #00ff90"></i></td>
+                }
+                else {
+                <td><i class="glyphicon glyphicon-remove" style="color: #ff0000"></i></td>
+                }
             </tr>
-        }
-    </tbody>
-</table>
-
+                //}
+            }
+        </tbody>
+    </table>
+</div>
