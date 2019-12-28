@@ -63,17 +63,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="145.7037"
-     inkscape:cy="456.98399"
+     inkscape:zoom="1.4"
+     inkscape:cx="-222.24465"
+     inkscape:cy="-330.44603"
      inkscape:document-units="mm"
      inkscape:current-layer="layer3"
      showgrid="false"
      units="px"
-     inkscape:window-width="1600"
-     inkscape:window-height="847"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1000"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
      inkscape:window-maximized="1"
      showguides="false" />
   <metadata
@@ -164,6 +164,16 @@
      id="layer3"
      inkscape:label="圖層 3"
      transform="translate(0,-13.229167)">
+    <rect
+       style="opacity:0.055;fill:#47ef00;fill-opacity:1;stroke:none;stroke-width:1.69999993;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect883"
+       width="106.2113"
+       height="59.909225"
+       x="-122.27529"
+       y="127.75595"
+       inkscape:export-filename="C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\Content\img\bg2.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
     <rect
        style="opacity:1;fill:#000000;fill-opacity:0;stroke:#ffffff;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect907"
@@ -303,7 +313,10 @@
        transform="matrix(1.0628413,0,0,1.0628413,3.2081442,0.7497349)" />
     <g
        id="g867"
-       transform="translate(-120.29232,-27.457062)">
+       transform="translate(-121.80422,108.8504)"
+       inkscape:export-filename="C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\Content\img\bg2.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
       <rect
          transform="matrix(1.0538191,-0.13819139,0.13819139,1.0538191,3.2081441,0.74973478)"
          inkscape:export-ydpi="200"
