@@ -8,8 +8,50 @@
 
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            console.log("ready!");
+        });
+
+        function AddToCart(productId) {
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("AddToCart", "Cart")',
+                data: { id: productId }
+            })
+            .done(function (msg) {
+                $('li#Cart').html(msg);
+                });
+        }
+
+        function RemoveFromCart(productId) {
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("RemoveFromCart", "Cart")',
+                data: { id: productId }
+            })
+            .done(function (msg) {
+                $('li#Cart').html(msg);
+            });
+        }
+
+
+        function ClearCart() {
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("ClearCart", "Cart")',
+                data: {}
+            })
+            .done(function (msg) {
+                $('li#Cart').html(msg);
+            });
+        }
+
+    </script>
 
 
 </head>
@@ -28,6 +70,7 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Cust_Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                    <li>@Html.ActionLink("Menu", "Menu", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

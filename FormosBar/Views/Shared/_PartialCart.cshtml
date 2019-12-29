@@ -1,0 +1,33 @@
+﻿@{
+    var currentCart = FormosBar.Models.ShoppingCart.CartActions.CurrentShoppingCart();
+}
+<a id="CartDropDown" class="dropdown-toggle" data-toggle="dropdown">
+    @String.Format("Total: £{0} ({1})", currentCart.TotalAmount, currentCart.Count)
+    <span class="caret"></span>
+</a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="CartDropDown">
+    @if (currentCart.Count > 0)
+    {
+        foreach (var cartitem in currentCart)
+        {
+    <li class="CartLi">
+        <span class="btn btn-danger CartCancel" onclick="RemoveFromCart('@cartitem.Id')">X</span>
+        <span class="CartSpanQuantity">@cartitem.Quantity</span><span>x</span><span class="CartSpanName">@cartitem.Name - <b>&pound; @cartitem.Price</b></span>
+    </li>
+        }
+        <li class="divider"></li>
+        <li>
+            <div id="CartButtons">
+                <a class="btn btn-success text-center col-xs-5" href="@Url.Action("Index","Order",new { })">CheckOut</a>
+                <a class="btn btn-danger text-center col-xs-5" onclick="ClearCart()">Clear</a>
+            </div>
+        </li>
+
+    }
+    else
+    {
+        <li><a class="btn btn-default text-center" href="#">No Items In Cart</a></li>
+    }
+</ul>
+
+

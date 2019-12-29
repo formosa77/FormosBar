@@ -20,5 +20,13 @@ namespace FormosBar.Controllers
             return View();
         }
 
+        public ActionResult Menu()
+        {
+            using (DAL.BarContext db = new DAL.BarContext()) {
+                var result = (from s in db.Items select s).ToList();
+                return View(result);
+            }
+        }
+
     }
 }

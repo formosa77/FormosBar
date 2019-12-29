@@ -1,0 +1,47 @@
+﻿@using Microsoft.AspNet.Identity;
+@model List<FormosBar.Models.Item>
+
+@{
+    ViewBag.Title = "Menu";
+    var UserID = User.Identity.GetUserId();
+    var UserName = User.Identity.Name;
+}
+
+<h2>Menu</h2>
+
+<div class="row">
+    @foreach (var item in this.Model)
+    {
+        <div class="col-sm-7 col-md-6">
+            <div class="wrapper">
+                <div class="product-img">
+                    <img src="@item.DefaultImageURL" height="250" width="180">
+                </div>
+                <div class="product-info">
+                    <div class="product-text">
+                        <h1>@item.Name</h1>
+                        <p>@item.Description</p>
+                    </div>
+                    <div class="product-price-btn">
+                        <p><span class="product_span">&pound; @item.Price</span></p>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <button type="button">@Html.ActionLink("Edit Item", "Index", "Item")</button>
+                        }
+                        else if (User.IsInRole("Customer"))
+                        {
+                            <button type="button" onclick="AddToCart('@item.Id')" href="javascript:void(0);">Add to Cart</button>
+                        }
+                        else
+                        {
+                            <button type="button">Sign-In</button>
+                        }
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+                        }
+    </div>
+
