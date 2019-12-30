@@ -11,22 +11,31 @@
         foreach (var cartitem in currentCart)
         {
     <li class="CartLi">
-        <span class="btn btn-danger CartCancel" onclick="RemoveFromCart('@cartitem.Id')">X</span>
-        <span class="CartSpanQuantity">@cartitem.Quantity</span><span>x</span><span class="CartSpanName">@cartitem.Name - <b>&pound; @cartitem.Price</b></span>
+        @{
+            int result = cartitem.Quantity * cartitem.Price;
+        }
+        <span class="CartCancel btn btn-danger " onclick="RemoveFromCart('@cartitem.Id')">X</span>
+        <span class="CartSpanQuantity">@cartitem.Quantity</span><span>x &pound;@cartitem.Price <b>(&pound;@result)</b></span><span class="CartSpanName">@cartitem.Name</span>
+
+        <span>
+            <b>
+                
+            </b>
+        </span>
     </li>
         }
         <li class="divider"></li>
         <li>
             <div id="CartButtons">
-                <a class="btn btn-success text-center col-xs-5" href="@Url.Action("Index","Order",new { })">CheckOut</a>
-                <a class="btn btn-danger text-center col-xs-5" onclick="ClearCart()">Clear</a>
+                <a class="btn btn-success text-center CartActionButtom" href="@Url.Action("Index","Order",new { })">CheckOut</a>
+                <a class="btn btn-danger text-center CartActionButtom" onclick="ClearCart()">Clear</a>
             </div>
         </li>
 
     }
     else
     {
-        <li><a class="btn btn-default text-center" href="#">No Items In Cart</a></li>
+        <li><a class="text-center"><b>No Items At Cart</b></a></li>
     }
 </ul>
 

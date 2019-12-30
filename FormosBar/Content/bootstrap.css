@@ -8629,6 +8629,7 @@ tbody tr {
     margin-top: 20px;
     height: 250px;
     width: 480px;
+    background-color: #fff;
     border-radius: 7px 7px 7px 7px;
     /* VIA CSS MATIC https://goo.gl/cIbnS */
     -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
@@ -8640,7 +8641,6 @@ tbody tr {
     float: left;
     height: 250px;
     width: 170px;
-    background-color: #fff;
 }
 
     .product-img img {
@@ -8736,15 +8736,45 @@ tbody tr {
     }
 
 .CartLi {
-    width: 350px;
+    width: 400px;
 }
 
 .CartCancel {
-    left: 5px;
-    width: 30px;
-    height: 30px;
+    margin-left: 15px;
+    width: 10px;
+    height: 10px;
+    font-size: 3px;
+    line-height: 0.5px;
     overflow-wrap: break-word;
-    padding-left: 10px;
+    padding-left: 8px;
+}
+
+    .CartCancel > btn {
+        display: inline-block;
+        padding: 3px 6px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.12857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+
+
+.CartActionButtom {
+    margin-left: 10px;
+    width: 180px;
 }
 
 .CartSpanName {
@@ -8754,9 +8784,9 @@ tbody tr {
 }
 
 .CartSpanQuantity {
-    font-weight: bold;
     padding: 0 10px 0 15px;
     width: 20px;
 }
+
 
         /*# sourceMappingURL=bootstrap.css.map */
