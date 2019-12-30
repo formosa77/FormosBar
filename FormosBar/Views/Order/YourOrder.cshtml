@@ -12,6 +12,7 @@
             <th>UserName</th>
             <th>Table Number</th>
             <th>Detail</th>
+            <th>Action</th>
         </tr>
     </thead>
     @foreach (var item in Model)
@@ -24,8 +25,10 @@
                 @Html.DisplayFor(modelItem => item.TableNumber)
             </td>
             <td>
-                @Html.ActionLink("商品明細", "YourOrderDetail", new { Id = item.Id }
-             , new { @class = "btn btn-success" })
+                @Html.ActionLink("OrderDetail", "YourOrderDetail", new { Id = item.Id }, new { @class = "btn btn-success" })
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
             </td>
         </tr>
     }

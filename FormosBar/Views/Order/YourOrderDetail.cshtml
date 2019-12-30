@@ -6,10 +6,14 @@
 
 <h2>YourOrderDetail</h2>
 
-<h2>@String.Format("Order Number {0}", this.Model.First().Id)</h2>
+<h2>@String.Format("Order Number {0}", this.Model.First().OrderId)</h2>
 <hr />
+ 
 @Html.ActionLink("Back to Order", "YourOrder", new { }, new { @class = "btn btn-default" })
-<hr/>
+    @Html.ActionLink("Add", "Add", new {  }, new { @class = "btn btn-danger" })
+
+
+<hr />
 <table class="table100-head">
     <thead>
         <tr>
@@ -35,6 +39,7 @@
             <td>
                 &pound; @result
             </td>
+
         </tr>
     }
     <tr style="background-color:#153353; color:#ffffff; font-size:18px; font-weight:bold;"><td colspan="2"></td><td>Total</td><td>@Model.Sum(b => b.Price * b.Quantity)</td></tr>

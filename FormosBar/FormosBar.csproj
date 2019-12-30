@@ -282,6 +282,9 @@
     <Content Include="Views\OrderManager\Details.cshtml" />
     <Content Include="Views\Order\YourOrder.cshtml" />
     <Content Include="Views\Order\YourOrderDetail.cshtml" />
+    <Content Include="Views\Order\Delete.cshtml" />
+    <Content Include="Views\Order\Edit.cshtml" />
+    <Content Include="Views\Order\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
