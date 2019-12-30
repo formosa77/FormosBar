@@ -1,0 +1,32 @@
+﻿@model IEnumerable<FormosBar.Models.Order>
+
+@{
+    ViewBag.Title = "YourOrder";
+}
+
+<h2>YourOrder</h2>
+
+<table class="table100-head">
+    <thead>
+        <tr>
+            <th>UserName</th>
+            <th>Table Number</th>
+            <th>Detail</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TableNumber)
+            </td>
+            <td>
+                @Html.ActionLink("商品明細", "YourOrderDetail", new { Id = item.Id }
+             , new { @class = "btn btn-success" })
+            </td>
+        </tr>
+    }
+</table>

@@ -173,6 +173,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\OrderManagerController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="DAL\BarContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -199,8 +201,19 @@
     <Compile Include="Migrations\ContextB\201912271839405_Item_v3.designer.cs">
       <DependentUpon>201912271839405_Item_v3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ContextB\201912300757434_Order.cs" />
+    <Compile Include="Migrations\ContextB\201912300757434_Order.designer.cs">
+      <DependentUpon>201912300757434_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ContextB\201912301317500_OrderDetail.cs" />
+    <Compile Include="Migrations\ContextB\201912301317500_OrderDetail.designer.cs">
+      <DependentUpon>201912301317500_OrderDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ContextB\ConfigB.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
+    <Compile Include="Models\OrderLocation.cs" />
     <Compile Include="Models\ShoppingCart\CartActions.cs" />
     <Compile Include="Models\ShoppingCart\Cart.cs" />
     <Compile Include="Models\ShoppingCart\ItemsInCart.cs" />
@@ -264,6 +277,11 @@
     <Content Include="Views\Item\Edit.cshtml" />
     <Content Include="Views\Home\Menu.cshtml" />
     <Content Include="Views\Shared\_PartialCart.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
+    <Content Include="Views\OrderManager\Index.cshtml" />
+    <Content Include="Views\OrderManager\Details.cshtml" />
+    <Content Include="Views\Order\YourOrder.cshtml" />
+    <Content Include="Views\Order\YourOrderDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -299,6 +317,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ContextB\201912271839405_Item_v3.resx">
       <DependentUpon>201912271839405_Item_v3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ContextB\201912300757434_Order.resx">
+      <DependentUpon>201912300757434_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ContextB\201912301317500_OrderDetail.resx">
+      <DependentUpon>201912301317500_OrderDetail.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

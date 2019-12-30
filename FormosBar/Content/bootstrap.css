@@ -8432,8 +8432,9 @@ table {
 .table100-head th {
     margin-top: 50px;
     font-family: OpenSans-Regular;
-    font-size: 15px;
+    font-size: 18px;
     color: #b6f339;
+    font-weight: bold;
     text-align: center;
     line-height: 1.2;
     font-weight: 500;

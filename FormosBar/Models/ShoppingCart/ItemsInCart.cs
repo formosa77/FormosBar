@@ -23,5 +23,8 @@ namespace FormosBar.Models.ShoppingCart
                 return this.Price * this.Quantity;
             }
         }
+
+        public string DefaultImageURL { get; set; }
+
     }
 }

@@ -5,18 +5,23 @@
     {
     @Html.AntiForgeryToken()
 
-    <ul class="nav navbar-nav navbar-right">
-        <li id="Cart">
-            @if (User.IsInRole("Customer")) { 
-                @Html.Partial("_PartialCart")
-            }
+<ul class="nav navbar-nav navbar-right">
+    <li id="Cart">
+        @if (User.IsInRole("Customer"))
+        {
+            @Html.Partial("_PartialCart")
+        }
 
-        </li>
-        <li>
-            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-        </li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
-    </ul>
+    </li>
+    <li>
+        @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+    </li>
+    @if (User.IsInRole("Customer"))
+    {
+        <li>@Html.ActionLink("Your Order", "YourOrder", "Order", routeValues: null, htmlAttributes: new { title = "Order" })</li>
+    }
+    <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+</ul>
     }
 }
 else

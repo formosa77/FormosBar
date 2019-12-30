@@ -4,15 +4,23 @@
 
 
 <div class="jumbotron">
-        <div class="container">
-            <div><h1><img src="~/Content/img/jumbotron_logo.png" width="250" class="img-fluid" /></h1></div>
-            <p class="lead">"The water was not fit to drink. To make it palatable, we had to add whisky. By diligent effort, I learned to like it." &#8212; <b>Winston Churchill</b></p>
+    <div class="container">
+        <div><h1><img src="~/Content/img/jumbotron_logo.png" width="250" class="img-fluid" /></h1></div>
+        <p class="lead">"The water was not fit to drink. To make it palatable, we had to add whisky. By diligent effort, I learned to like it." &#8212; <b>Winston Churchill</b></p>
+        @if (User.IsInRole("Admin"))
+        {
+        }
+        else
+        {
             <p style="text-align: center;">
-            <a href="https://asp.net" class="btn btn-primary btn-lg" style="height: 60px; padding-top: 18px;">
-                <i class="fa fa-cutlery" aria-hidden="true"></i>
-                Place Order Now 
-                <i class="fa fa-cutlery" aria-hidden="true"></i></a></p>
-        </div>
+                <a href="@Url.Action("Menu","Home")" class="btn btn-primary btn-lg" style="height: 60px; padding-top: 18px;">
+                    <i class="fa fa-cutlery" aria-hidden="true"></i>
+                    Place Your Order
+                    <i class="fa fa-cutlery" aria-hidden="true"></i>
+                </a>
+            </p>
+        }
+    </div>
     </div>
 
 

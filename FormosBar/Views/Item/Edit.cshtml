@@ -44,7 +44,7 @@
                         @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
                         <div style="margin-bottom: 25px" class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
-                            @Html.EditorFor(model => model.Price, new { htmlAttributes = new { placeholder = "Price (Between 1 GBP - 999 GBP)", @class = "form-control" } })
+                            @Html.EditorFor(model => model.Price, new { htmlAttributes = new { min = 1, max = 999, placeholder = "Price (Between 1 GBP - 999 GBP)", @class = "form-control" } })
                         </div>
 
                         @Html.ValidationMessageFor(model => model.DefaultImageURL, "", new { @class = "text-danger" })

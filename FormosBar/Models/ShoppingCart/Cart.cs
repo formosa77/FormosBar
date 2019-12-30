@@ -66,6 +66,7 @@ namespace FormosBar.Models.ShoppingCart
                 Id = item.Id,
                 Name = item.Name,
                 Price = item.Price,
+                DefaultImageURL = item.DefaultImageURL,
                 Quantity = 1
             };
 
@@ -92,6 +93,22 @@ namespace FormosBar.Models.ShoppingCart
         public bool ClearCart() {
             this.itemsInCarts.Clear();
             return true;
+        }
+
+        public List<Models.OrderDetail> ToOrderDetailList(int orderId)
+        {
+            var result = new List<Models.OrderDetail>();
+            foreach (var cartItem in this.itemsInCarts)
+            {
+                result.Add(new Models.OrderDetail()
+                {
+                    Name = cartItem.Name,
+                    Price = cartItem.Price,
+                    Quantity = cartItem.Quantity,
+                    OrderId = orderId
+                });
+            }
+            return result;
         }
 
         #region IEnumerator

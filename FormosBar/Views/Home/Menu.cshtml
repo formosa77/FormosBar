@@ -12,6 +12,7 @@
 <div class="row">
     @foreach (var item in this.Model)
     {
+        if(item.OnShelf == true) { 
         <div class="col-sm-7 col-md-6">
             <div class="wrapper">
                 <div class="product-img">
@@ -34,14 +35,13 @@
                         }
                         else
                         {
-                            <button type="button">Sign-In</button>
+                            <button type="button">@Html.ActionLink("Sign-Up", "Register", "Account")</button>
                         }
                     </div>
                 </div>
             </div>
-
-
         </div>
-                        }
+        }
+    }
     </div>
 

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<FormosBar.Models.Order>
+
+@{
+    ViewBag.Title = "Order Summary";
+}
+
+<h2>Order Summary</h2>
+
+@using (Html.BeginForm("SerachByUserName", "OrderManager"))
+{
+    @Html.TextBox("UserName", null, new { placeholder = "Search in UserName", @style = "width: 200px;" , @class = "btn form-control"})
+    <input type="submit" value="Search" class="btn btn-default" />
+}
+
+<table class="table100-head" style="margin-top: 10px;">
+    <thead>
+        <tr>
+            <th>UserName</th>
+            <th>Table Number</th>
+            <th>Detail</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TableNumber)
+                </td>
+                <td>
+                    @Html.ActionLink("Order Detail", "Details", new { id = item.Id }, new { @class = "btn btn-success" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
