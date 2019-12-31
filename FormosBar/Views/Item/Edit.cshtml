@@ -54,6 +54,12 @@
                         </div>
                         <p class="bg-info" style="font-size: 12px; margin-top:5px;">Please upload image under folder: ~/Content/img/ItemPhotos.</p>
 
+                        @Html.ValidationMessageFor(model => model.ImageAlt, "", new { @class = "text-danger" })
+                        <div class="input-group" style="margin-bottom: 20px;">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-option-horizontal"></i></span>
+                            @Html.EditorFor(model => model.ImageAlt, new { htmlAttributes = new { placeholder = "For Web Accessibility Image Alternative Text", @class = "form-control" } })
+                        </div>
+
                         @Html.ValidationMessageFor(model => model.OnShelf, "", new { @class = "text-danger" })
                         <div style="margin-bottom: 25px;" class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-eye-open"></i></span>

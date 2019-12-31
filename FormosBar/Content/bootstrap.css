@@ -419,10 +419,14 @@ th {
 
 .glyphicon-zoom-in:before {
     content: "\e015";
+    font-size: 20px;
+    color: #fff;
 }
 
 .glyphicon-zoom-out:before {
     content: "\e016";
+    font-size: 20px;
+    color: #fff;
 }
 
 .glyphicon-off:before {
@@ -483,6 +487,8 @@ th {
 
 .glyphicon-refresh:before {
     content: "\e031";
+    font-size: 20px;
+    color:#fff;
 }
 
 .glyphicon-list-alt:before {
@@ -7368,6 +7374,7 @@ button.close {
     float: left;
     width: 65%;
     padding-top: 10px;
+    padding-left: 25px;
     text-align: left;
 }
 

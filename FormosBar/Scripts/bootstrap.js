@@ -3,6 +3,45 @@
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under the MIT license
  */
+//
+// Handle Zoom in
+jQuery(document).ready(function ($) {
+    // Set initial zoom level
+    var zoom_level = 100;
+
+    // Click events
+    $('#zoom_in').click(function () { zoom_page(10, $(this)) });
+    $('#zoom_out').click(function () { zoom_page(-10, $(this)) });
+    $('#zoom_reset').click(function () { zoom_page(0, $(this)) });
+
+    function reload() {
+        location.reload(forceGet)
+    }
+
+    // Zoom function
+    function zoom_page(step, trigger) {
+        // Zoom just to steps in or out
+        if (zoom_level >= 120 && step > 0 || zoom_level <= 80 && step < 0) return;
+
+        // Set page zoom via CSS
+        $('html').css({
+            transform: 'scale(' + (zoom_level / 100) + ')', // set zoom
+            transformOrigin: '25% 0' // set transform scale base
+        });
+
+        // Adjust page to zoom width
+        if (zoom_level > 100) $('html').css({ width: (zoom_level * 1.2) + '%' });
+        else $('html').css({ width: '120%' });
+
+
+        // Activate / deaktivate trigger (use CSS to make them look different)
+        if (zoom_level >= 110 || zoom_level <= 90) trigger.addClass('disabled');
+        else trigger.parents('ul').find('.disabled').removeClass('disabled');
+        if (zoom_level != 100) $('#zoom_reset').removeClass('disabled');
+        else $('#zoom_reset').addClass('disabled');
+    }
+});
+
 //Handle BacktoTop Start
 
         //Get the button:

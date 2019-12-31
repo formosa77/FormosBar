@@ -209,6 +209,18 @@
     <Compile Include="Migrations\ContextB\201912301317500_OrderDetail.designer.cs">
       <DependentUpon>201912301317500_OrderDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ContextB\201912310724119_OrderAdd.cs" />
+    <Compile Include="Migrations\ContextB\201912310724119_OrderAdd.designer.cs">
+      <DependentUpon>201912310724119_OrderAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ContextB\201912310748065_OrderAdd1.cs" />
+    <Compile Include="Migrations\ContextB\201912310748065_OrderAdd1.designer.cs">
+      <DependentUpon>201912310748065_OrderAdd1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ContextB\201912311942206_ItemImgAlt.cs" />
+    <Compile Include="Migrations\ContextB\201912311942206_ItemImgAlt.designer.cs">
+      <DependentUpon>201912311942206_ItemImgAlt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ContextB\ConfigB.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Order.cs" />
@@ -326,6 +338,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ContextB\201912301317500_OrderDetail.resx">
       <DependentUpon>201912301317500_OrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ContextB\201912310724119_OrderAdd.resx">
+      <DependentUpon>201912310724119_OrderAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ContextB\201912310748065_OrderAdd1.resx">
+      <DependentUpon>201912310748065_OrderAdd1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ContextB\201912311942206_ItemImgAlt.resx">
+      <DependentUpon>201912311942206_ItemImgAlt.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

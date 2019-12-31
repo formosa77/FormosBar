@@ -67,6 +67,7 @@ namespace FormosBar.Models.ShoppingCart
                 Name = item.Name,
                 Price = item.Price,
                 DefaultImageURL = item.DefaultImageURL,
+                ImgAlt = item.ImageAlt,
                 Quantity = 1
             };
 

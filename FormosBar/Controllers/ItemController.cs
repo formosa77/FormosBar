@@ -98,6 +98,7 @@ namespace FormosBar.Controllers
                     result.Name = postback.Name; result.Price = postback.Price;
                     result.Description = postback.Description; result.OnShelf = postback.OnShelf;
                     result.DefaultImageURL = postback.DefaultImageURL; result.Category = postback.Category;
+                    result.ImageAlt = postback.ImageAlt;
 
                     //Save the change
                     db.SaveChanges();

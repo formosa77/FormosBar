@@ -432,3 +432,6 @@ C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\obj
 C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.Migrations.ContextB.Order.resources
 C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.Migrations.ContextB.OrderDetail.resources
 C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.csprojAssemblyReference.cache
+C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.Migrations.ContextB.OrderAdd.resources
+C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.Migrations.ContextB.OrderAdd1.resources
+C:\Users\Jacob\Desktop\NAS Sharing\Plymouth - DB\Project\FormosBar\FormosBar\obj\Debug\FormosBar.Migrations.ContextB.ItemImgAlt.resources

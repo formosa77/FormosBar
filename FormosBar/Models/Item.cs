@@ -31,7 +31,11 @@ namespace FormosBar.Models
         [Required(ErrorMessage = "On Shelf Status is required")]
         public bool OnShelf { get; set; }
 
+        [Required(ErrorMessage = "Image is required")]
         public string DefaultImageURL { get; set; }
+
+        [Required(ErrorMessage = "Image Alternative Text is required")]
+        public string ImageAlt { get; set; }
     }
 
 }

@@ -26,5 +26,7 @@ namespace FormosBar.Models.ShoppingCart
 
         public string DefaultImageURL { get; set; }
 
+        public string ImgAlt { get; set; }
+
     }
 }

@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title | FormosBar - Chill & Full</title>
 
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
 
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 
 </head>
@@ -37,21 +39,22 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <button onclick="topFunction()" id="back2top" title="Go to top">Top</button>
 
+        <button onclick="topFunction()" id="back2top" title="Go to top">Top</button>
         <hr />
+
+
     </div>
     <footer class="navbar-fixed-bottom" style="padding:0px; margin:0; position:fixed; bottom:0">
         <div class="modal-footer">
             <div class="footer-container-left">&copy; @DateTime.Now.Year FormosBar. &emsp; |&emsp; Privacy Policy&emsp; |&emsp; Terms of Use&emsp;|&emsp;Accessibility Statement&emsp;|</div>
             <div class="footer-container-right">
-                <b><font color="#b6ff00">Follow Us <i class="glyphicon glyphicon-chevron-right"></i></font></b>&nbsp;
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-youtube"></a>
+                <a id="zoom_in" class="glyphicon glyphicon-zoom-in"></a>
+                <a id="zoom_out" class="glyphicon glyphicon-zoom-out"></a>
+                <a href="" onclick="reload()" class="glyphicon glyphicon-refresh"></a>
             </div>
             <div class="footer-container-slogan">
-                <img src="~/Content/img/Slogan.png" style="max-width: 150px;" />
+                <img src="~/Content/img/Slogan.png" alt="Bar Slogan" title="Bar Slogan" style="max-width: 150px;" />
             </div>
         </div>
     </footer>

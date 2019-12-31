@@ -52,7 +52,7 @@
         @foreach (var pd in cart)
         {
             <tr>
-                <td><img src="@pd.DefaultImageURL" width="50" height="50" /></td>
+                <td><img src="@pd.DefaultImageURL" alt="@pd.ImgAlt" title="@pd.ImgAlt" width="50" height="50" /></td>
                 <td>@pd.Name</td>
                 <td>&pound; @pd.Price</td>
                 <td>@pd.Quantity</td>
