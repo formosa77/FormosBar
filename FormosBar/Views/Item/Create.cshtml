@@ -24,13 +24,13 @@
 
 
                     @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
-                    <div style="margin-bottom: 25px;" class="input-group">
+                    <div style="margin-bottom: 25px;" class="input-group" role="textbox" aria-describedby="Item Name" contenteditable="true">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-glass"></i></span>
                         @Html.EditorFor(model => model.Name, new { htmlAttributes = new { placeholder = "Item Name", @class = "form-control" } })
                     </div>
 
                     @Html.ValidationMessageFor(model => model.Category, "", new { @class = "text-danger" })
-                    <div style="margin-bottom: 25px;" class="input-group">
+                    <div style="margin-bottom: 25px;" class="input-group" role="list" aria-describedby="Category" contenteditable="true">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-th-list"></i></span>
                         @Html.DropDownListFor(model => model.Category, new List<SelectListItem>
                        { new SelectListItem{Text="Drink", Value="Drink"},
@@ -38,39 +38,39 @@
                     </div>
 
                     @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
-                    <div style="margin-bottom: 25px" class="input-group">
+                    <div style="margin-bottom: 25px" class="input-group" role="textbox" aria-describedby="Description" contenteditable="true">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-option-horizontal"></i></span>
                         @Html.EditorFor(model => model.Description, new { htmlAttributes = new { placeholder = "Description", @class = "form-control" } })
                     </div>
 
                     @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
-                    <div style="margin-bottom: 25px" class="input-group">
+                    <div style="margin-bottom: 25px" class="input-group" role="textbox" aria-describedby="Price" contenteditable="true">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-gbp"></i></span>
                         @Html.EditorFor(model => model.Price, new { htmlAttributes = new { min = 1, max = 999, placeholder = "Price (Between 1 GBP - 999 GBP)", @class = "form-control" } })
                     </div>
 
                     @Html.ValidationMessageFor(model => model.DefaultImageURL, "", new { @class = "text-danger" })
-                    <div class="input-group">
+                    <div class="input-group" role="textbox" aria-describedby="Image Path" contenteditable="true">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-link"></i></span>
                         @Html.EditorFor(model => model.DefaultImageURL, new { htmlAttributes = new { placeholder = "Image Path (~/Content/img/ItemPhotos/xxx.jpg)", @class = "form-control" } })
                     </div>
                     <p class="bg-info" style="font-size: 12px; margin-top:5px;">Please upload image under folder: ~/Content/img/ItemPhotos.</p>
                    
                     @Html.ValidationMessageFor(model => model.ImageAlt, "", new { @class = "text-danger" })
-                    <div class="input-group" style="margin-bottom: 20px;">
+                    <div class="input-group" style="margin-bottom: 20px;" role="textbox" aria-describedby="Image Alternative Text" contenteditable="true">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-option-horizontal"></i></span>
                         @Html.EditorFor(model => model.ImageAlt, new { htmlAttributes = new { placeholder = "For Web Accessibility Image Alternative Text", @class = "form-control" } })
                     </div>
 
                     @Html.ValidationMessageFor(model => model.OnShelf, "", new { @class = "text-danger" })
-                    <div style="margin-bottom: 25px;" class="input-group">
+                    <div style="margin-bottom: 25px;" class="input-group" role="list" aria-describedby="Item On Shelf?" contenteditable="true">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-eye-open"></i></span>
                         @Html.DropDownListFor(model => model.OnShelf, new List<SelectListItem>
                        { new SelectListItem{Text="Yes", Value="true"},
                          new SelectListItem{Text="No", Value="false"}}, "Is this Item Available on Store?", new { @class = "form-control" })
                     </div>
 
-                    <div style="margin-top:20px" class="form-group">
+                    <div style="margin-top:20px" class="form-group" role="button" aria-describedby="Create" contenteditable="true">
                         <div class="col-sm-12 controls">
                             <input type="submit" value="Create" class="btn btn-success" />
                             @Html.ActionLink("Back", "Index", new { }, new { @class = "btn btn-default" })

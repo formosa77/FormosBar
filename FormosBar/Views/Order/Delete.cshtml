@@ -15,7 +15,7 @@
         @Html.AntiForgeryToken()
 
     <div class="form-actions no-color">
-        <input type="submit" value="Yes" class="btn btn-default btn-danger" style="width:150px;" /> 
+        <input type="submit" value="Yes" class="btn btn-default btn-danger" style="width:150px;" role="button" aria-describedby="Yes"/> 
         @Html.ActionLink("Back to List", "YourOrder", new { }, new {@style="width:150px;", @class = "btn btn-default" })
 
     </div>

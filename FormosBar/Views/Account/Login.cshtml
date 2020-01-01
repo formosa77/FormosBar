@@ -28,19 +28,19 @@
 
 
 
-                            <div style="margin-bottom: 25px;" class="input-group">
+                            <div style="margin-bottom: 25px;" class="input-group" role="form">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                 @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
                             </div>
 
-                            <div style="margin-bottom: 25px" class="input-group">
+                            <div style="margin-bottom: 25px" class="input-group" role="form">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                                 @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
                             </div>
 
 
                             <div class="input-group">
-                                <div class="checkbox">
+                                <div class="checkbox" role="checkbox" aria-describedby="Remember Me">
                                     <label>
                                         @Html.CheckBoxFor(m => m.RememberMe)
                                         @Html.LabelFor(m => m.RememberMe)
@@ -51,13 +51,13 @@
                             <div style="margin-top:20px" class="form-group">
                                 <!-- Button -->
                                 <div class="col-sm-12 controls">
-                                    <input type="submit" value="Login" class="btn btn-success" />
+                                    <input type="submit" value="Login" class="btn btn-success" role="button" aria-describedby="Login"/>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="col-md-12 control">
-                                    <div style="border-top: 2px solid#888; padding-top:15px;padding-bottom:0px; font-size:85%">
+                                    <div style="border-top: 2px solid#888; padding-top:15px;padding-bottom:0px; font-size:85%" role="button" aria-describedby="Register">
                                         Don't have an account!
                                         @Html.ActionLink("Sign Up Here", "Register")
                                     </div>

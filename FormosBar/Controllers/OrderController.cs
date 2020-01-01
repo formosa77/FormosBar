@@ -222,40 +222,40 @@ namespace FormosBar.Controllers
 
 
 
-        public async Task<ActionResult> Edit(int? id)
-        {
-            using (DAL.BarContext db = new DAL.BarContext())
-            {
+        //public async Task<ActionResult> Edit(int? id)
+        //{
+        //    using (DAL.BarContext db = new DAL.BarContext())
+        //    {
 
-                if (id == null)
-                {
-                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-                }
-                OrderDetail orderdetail = await db.OrderDetails.FindAsync(id);
-                if (orderdetail == null)
-                {
-                    return HttpNotFound();
-                }
-                return View(orderdetail);
-            }
-        }
+        //        if (id == null)
+        //        {
+        //            return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //        }
+        //        OrderDetail orderdetail = await db.OrderDetails.FindAsync(id);
+        //        if (orderdetail == null)
+        //        {
+        //            return HttpNotFound();
+        //        }
+        //        return View(orderdetail);
+        //    }
+        //}
 
-        // POST: Orders/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(OrderDetail orderdetail)
-        {
-            using (DAL.BarContext db = new DAL.BarContext())
-            {
-                if (ModelState.IsValid)
-                {
-                    db.Entry(orderdetail).State = EntityState.Modified;
-                    await db.SaveChangesAsync();
-                    return RedirectToAction("Index");
-                }
-                return View(orderdetail);
-            }
-        }
+        //// POST: Orders/Edit/5
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<ActionResult> Edit(OrderDetail orderdetail)
+        //{
+        //    using (DAL.BarContext db = new DAL.BarContext())
+        //    {
+        //        if (ModelState.IsValid)
+        //        {
+        //            db.Entry(orderdetail).State = EntityState.Modified;
+        //            await db.SaveChangesAsync();
+        //            return RedirectToAction("Index");
+        //        }
+        //        return View(orderdetail);
+        //    }
+        //}
 
     }
 }

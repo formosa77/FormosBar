@@ -17,33 +17,33 @@
                 </div>
             </div>
             <div class="panel-body">
-                <form id="signupform" class="form-horizontal" role="form">
+                <form id="signupform" class="form-horizontal" role="form" aria-describedby="Register Form">
                     <div>@Html.ValidationSummary("", new { @class = "text-danger" })</div>
-                    <div class="form-group">
+                    <div class="form-group" role="textbox" aria-describedby="UserName">
                         <label for="Username" class="col-md-5 control-label">Username</label>
                         <div class="col-md-7">
                             @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" role="textbox" aria-describedby="Password">
                         <label for="Password" class="col-md-5 control-label">Password</label>
                         <div class="col-md-7">
                             @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" role="textbox" aria-describedby="Confirm Password">
                         <label for="ConfirmPassword" class="col-md-5 control-label">Confirm Password</label>
                         <div class="col-md-7">
                             @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" role="textbox" aria-describedby="Email">
                         <label for="Email" class="col-md-5 control-label">Email</label>
                         <div class="col-md-7">
                             @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" role="radio" aria-describedby="User Role">
                         <label for="UserRole" class="col-md-5 control-label">User Role</label>
                         <div class="col-md-7" style="padding-top:7px;">
                             @Html.RadioButtonFor(m => m.UserRole, "Customer", new { @class = "radio-inline", @checked = true })@Html.Label(" Customer")
@@ -52,8 +52,8 @@
                     <div class="form-group">
                         <!-- Button -->
                         <div class="col-md-offset-5 col-md-9">
-                            <input type="submit" class="btn btn-info" value="Register" />
-                            <input type="reset" class="btn btn-danger" value="Clear" />
+                            <input type="submit" class="btn btn-info" value="Register" role="button" aria-describedby="Register"/>
+                            <input type="reset" class="btn btn-danger" value="Clear" role="button" aria-describedby="Clear"/>
                         </div>
                     </div>
                 </form>

@@ -20,7 +20,7 @@
         }
         <li class="divider"></li>
         <li>
-            <div id="CartButtons">
+            <div id="CartButtons" role="button" aria-disabled="false" aria-describedby="Check Out Option">
                 <a class="btn btn-success text-center CartActionButtom" href="@Url.Action("Index","Order",new { })">CheckOut</a>
                 <a class="btn btn-danger text-center CartActionButtom" onclick="ClearCart()">Clear</a>
             </div>
