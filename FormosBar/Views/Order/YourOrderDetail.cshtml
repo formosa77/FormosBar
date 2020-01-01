@@ -6,12 +6,14 @@
 
 <h2>YourOrderDetail</h2>
 
-<h2>@String.Format("Order Number {0}", this.Model.First().OrderId)</h2>
+<h2 style="text-align:left;">
+    @String.Format("Order Number: {0}", this.Model.First().OrderId)
+    <br /><br />
+    You have to type-in this Order Number - @String.Format("{0}", this.Model.First().OrderId) - if you want to add new food/snack to this order.
+</h2>
 <hr />
  
 @Html.ActionLink("Back to Order", "YourOrder", new { }, new { @class = "btn btn-default" })
-    @Html.ActionLink("Add", "Add", new {  }, new { @class = "btn btn-danger" })
-
 
 <hr />
 <table class="table100-head">

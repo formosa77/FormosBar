@@ -12,5 +12,6 @@ namespace FormosBar.Models
         [Display(Name = "Table Number")]
         [Range(1, 30, ErrorMessage = "Table Number must be between 1 and 30")]
         public int TableNumber{ get; set; }
+        public int? OrderId { get; set; }
     }
 }

@@ -25,37 +25,75 @@ namespace FormosBar.Controllers
 
         [Authorize(Roles = "Customer")]
         [HttpPost]
-        public ActionResult Index(Models.OrderLocation postback)
+        public ActionResult Index(Models.OrderLocation postback, Nullable <int> OrderId)
         {
-            if (this.ModelState.IsValid)
+            if (OrderId == null)
             {
-                var currentcart = Models.ShoppingCart.CartActions.CurrentShoppingCart();
-                var userId = HttpContext.User.Identity.GetUserId();
-                var userName = HttpContext.User.Identity.GetUserName();
-
-                using (DAL.BarContext db = new DAL.BarContext())
+                if (this.ModelState.IsValid)
                 {
+                    var currentcart = Models.ShoppingCart.CartActions.CurrentShoppingCart();
+                    var userId = HttpContext.User.Identity.GetUserId();
+                    var userName = HttpContext.User.Identity.GetUserName();
 
-                    var order = new Models.Order()
+                    using (DAL.BarContext db = new DAL.BarContext())
                     {
-                        UserId = userId,
-                        UserName = userName,
-                        TableNumber = postback.TableNumber,
-                    };
 
-                    db.Orders.Add(order);
-                    db.SaveChanges();
+                        var order = new Models.Order()
+                        {
+                            UserId = userId,
+                            UserName = userName,
+                            TableNumber = postback.TableNumber,
+                        };
 
-                    var orderDetails = currentcart.ToOrderDetailList(order.Id);
+                        db.Orders.Add(order);
+                        db.SaveChanges();
 
-                    db.OrderDetails.AddRange(orderDetails);
-                    db.SaveChanges();
+                        var orderDetails = currentcart.ToOrderDetailList(order.Id);
 
+                        db.OrderDetails.AddRange(orderDetails);
+                        db.SaveChanges();
+
+                    }
+
+                    return View("~/Views/Home/Index.cshtml");
+                }
+            }
+            else {
+
+                if (this.ModelState.IsValid)
+                {
+                    var currentcart = Models.ShoppingCart.CartActions.CurrentShoppingCart();
+                    //var userId = HttpContext.User.Identity.GetUserId();
+                    //var userName = HttpContext.User.Identity.GetUserName();
+
+                    using (DAL.BarContext db = new DAL.BarContext())
+                    {
+                        //var order = new Models.Order()
+                        //{
+                        //    Id = OrderId.GetValueOrDefault();
+                        //};
+                        
+                        //var order = new Models.Order()
+                        //{
+                        //    UserId = userId,
+                        //    UserName = userName,
+                        //    TableNumber = postback.TableNumber,
+                        //};
+
+                        //db.Orders.Add(order);
+                        //db.SaveChanges();
+
+                        var orderDetails = currentcart.ToOrderDetailList(OrderId.GetValueOrDefault());
+
+                        db.OrderDetails.AddRange(orderDetails);
+                        db.SaveChanges();
+
+                    }
+
+                    return View("~/Views/Home/Index.cshtml");
                 }
 
-                return View("~/Views/Home/Index.cshtml");
             }
-
             return View();
         }
 

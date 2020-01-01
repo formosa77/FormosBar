@@ -11,6 +11,7 @@
 
 <h2>CheckOut Summary</h2>
 
+
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -19,10 +20,15 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div>
-            <div id="CreateItem" style="margin-top:5px; left: 0px;" class="mainbox col-md-5  col-sm-8">
+            <div id="CreateItem" style="margin-top:5px; left: 0px;" class="mainbox col-md-8  col-sm-8">
                 <div class="panel panel-info">
                     <div class="panel-heading">
-                        <div class="panel-title">Please Enter Your Table Number</div>
+                        <div class="panel-title">
+                            Please Enter Your Table Number<br /><br />
+                            If you want to <b>Add-on</b> please fill in :<br />
+                            <b>Current Table Number</b> (Table Number can be retrieved at "Your Order" page;<br />
+                            <b>Last Order Number</b> (Order Number can be retrieved at "Your Order Detail" Page)
+                        </div>
                     </div>
                     <div style="padding-top:10px" class="panel-body">
                         <form id="createform2" class="form-horizontal" role="form">
@@ -32,8 +38,11 @@
                                 <div class="input-group">
                                     <div style="float:left"><span class="input-group-addon" style="height: 34px;"><i class="glyphicon glyphicon-glass"></i></span></div>
                                     <div style="float:left; width: 260px;">@Html.EditorFor(model => model.TableNumber, new { htmlAttributes = new { min = 1, max = 30, placeholder = "Table Number (Between 1 - 30)", @class = "form-control" } })</div>
-                                    <div style="float:left">
-                                        &nbsp;
+                                    <div>
+                                        <div style="float:left"><span class="input-group-addon" style="height: 34px;"><i class="glyphicon glyphicon-pencil"></i></span></div>
+                                        <div style="float:left; width: 260px;">@Html.EditorFor(model => model.OrderId, new { htmlAttributes = new { min = 1, placeholder = "Order Number (Refer to 'Your Order')", @class = "form-control" } })</div>
+                                    </div>
+                                    <div style="padding-top:20px;">
                                         <input type="submit" value="CheckOut" class="btn btn-success" />
                                     </div>
                                 </div>
