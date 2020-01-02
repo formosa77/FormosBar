@@ -10,9 +10,10 @@
 {
     @Html.TextBox("UserName", null, new { placeholder = "Search in UserName", @style = "width: 200px;" , @class = "btn form-control"})
     <input type="submit" value="Search" class="btn btn-default" role="button" aria-describedby="Search"/>
+    <input type="reset" value="Clear" class="btn btn-default" onclick="location.href = '/OrderManager';"/>
 }
 
-<table class="table100-head" style="margin-top: 10px;">
+<table class="table" style="margin-top: 10px;">
     <thead>
         <tr>
             <th>UserName</th>
