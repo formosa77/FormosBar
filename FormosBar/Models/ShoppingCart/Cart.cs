@@ -106,7 +106,8 @@ namespace FormosBar.Models.ShoppingCart
                     Name = cartItem.Name,
                     Price = cartItem.Price,
                     Quantity = cartItem.Quantity,
-                    OrderId = orderId
+                    OrderId = orderId,
+                    Status = 1
                 });
             }
             return result;

@@ -25,6 +25,10 @@ namespace FormosBar
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/bundles/app").Include(
+                      "~/Scripts/knockout-3.5.1.js",
+                      "~/Scripts/app.js"));
         }
     }
 }

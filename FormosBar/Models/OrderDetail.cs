@@ -8,11 +8,14 @@ namespace FormosBar.Models
     public class OrderDetail
     {
         public int Id { get; set; }
-        public int OrderId { get; set; }
         public string Name { get; set; }
         public int Price { get; set; }
         public int Quantity { get; set; }
+        public int Status { get; set; }
 
-        public virtual Order Order { get; set; }
+        // Foreign Key
+        public int OrderId { get; set; }
+        // Navigation property
+        public Order Order { get; set; }
     }
 }

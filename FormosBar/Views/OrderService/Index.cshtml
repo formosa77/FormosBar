@@ -1,0 +1,129 @@
+﻿@section scripts {
+    @Scripts.Render("~/bundles/app")
+}
+
+@{
+    ViewBag.Title = "Order Service";
+}
+<div class="page-header">
+    <h1>OrderService</h1>
+</div>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">Orders</h2>
+            </div>
+            <div class="panel-body">
+                <ul class="list-unstyled" data-bind="foreach: orders">
+                    <li>
+                        <strong>Order <span data-bind="text: id"></span></strong>: <span data-bind="text: orderUserName"></span>
+                        <small><a href="#" data-bind="click: $parent.getOrderDetail">Details</a></small>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="alert alert-danger" data-bind="visible: error"><p data-bind="text: error"></p></div>
+    </div>
+
+    <!-- ko if:detail() -->
+
+    <div class="col-md-7">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">Detail of Order ID: <strong data-bind="text: order_id"></strong></h2>
+            </div>
+            <table class="table">
+                <tr>
+                    <td>
+                        <table width="100%" data-bind="foreach: detail">
+                            <tr>
+                                <td width="60%">Item: <strong data-bind="text: name"></strong></td>
+                                <td width="20%">Quantity: <strong data-bind="text: quantity"></strong></td>
+                                <td width="20%">
+                                    <select data-bind="value: status, event: {change: $parent.updateOrderStatus}">
+                                        <option value="1">Ordered</option>
+                                        <option value="2">Preparing</option>
+                                        <option value="3">Delivered</option>
+                                    </select>
+                                </td>
+                                <td><a href="#" data-bind="click: $parent.deleteOrderItem">Detele</a></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h2 class="panel-title">Add Order Item</h2>
+                            </div>
+
+                            <div class="panel-body">
+                                <form class="form-horizontal" data-bind="submit: addOrderItem">
+                                    <div class="form-group">
+                                        <label for="inputItem" class="col-sm-2 control-label">Item</label>
+                                        <div class="col-sm-10">
+                                            <select data-bind="value: newItem.Name">
+                                                <option value="Free Gift: Food Coupon">Free Gift: Food Coupon</option>
+                                                <option value="Free Gift: Drink Coupon">Free Gift: Drink Coupon</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" data-bind="with: newItem">
+                                        <label for="inputQuantity" class="col-sm-2 control-label">Quantity</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="inputQuantity" data-bind="value:Quantity" />
+                                        </div>
+
+                                    </div>
+                                    <button type="submit" class="btn btn-default">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+        </div>
+        </td>
+        </tr>
+        </table>
+    </div>
+    </div>
+
+    <!-- /ko -->
+
+
+    @*<div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">Add Order Item</h2>
+            </div>
+
+            <div class="panel-body">
+                <form class="form-horizontal" data-bind="submit: addOrderItem">
+                    <div class="form-group">
+                        <label for="inputItem" class="col-sm-2 control-label">Item</label>
+                        <div class="col-sm-10">
+                            <select data-bind="value: newItem.Name">
+                                <option value="Free Gift: Coupon">Free Gift: Food Coupon</option>
+                                <option value="Free Gift: Spoon">Free Gift: Drink Coupon</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group" data-bind="with: newItem">
+                        <label for="inputQuantity" class="col-sm-2 control-label">Quantity</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputQuantity" data-bind="value:Quantity" />
+                        </div>
+
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>*@
+
+</div>

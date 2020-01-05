@@ -11,7 +11,5 @@ namespace FormosBar.Models
         public string UserId { get; set; }
         public string UserName { get; set; }
         public int TableNumber { get; set; }
-
-        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

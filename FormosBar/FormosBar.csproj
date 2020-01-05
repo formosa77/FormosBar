@@ -180,12 +180,16 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\api\ItemsController.cs" />
+    <Compile Include="Controllers\api\OrderDetails1Controller.cs" />
+    <Compile Include="Controllers\api\OrderDetailsController.cs" />
+    <Compile Include="Controllers\api\OrdersController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\OrderManagerController.cs" />
+    <Compile Include="Controllers\OrderServiceController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="DAL\BarContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -232,10 +236,28 @@
     <Compile Include="Migrations\ContextB\201912311942206_ItemImgAlt.designer.cs">
       <DependentUpon>201912311942206_ItemImgAlt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ContextB\202001040819516_OrdernOrderDetail.cs" />
+    <Compile Include="Migrations\ContextB\202001040819516_OrdernOrderDetail.designer.cs">
+      <DependentUpon>202001040819516_OrdernOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ContextB\202001041158463_OrderTable.cs" />
+    <Compile Include="Migrations\ContextB\202001041158463_OrderTable.designer.cs">
+      <DependentUpon>202001041158463_OrderTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ContextB\202001041317502_Order2.cs" />
+    <Compile Include="Migrations\ContextB\202001041317502_Order2.designer.cs">
+      <DependentUpon>202001041317502_Order2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ContextB\202001041328071_OrderDetailStatus.cs" />
+    <Compile Include="Migrations\ContextB\202001041328071_OrderDetailStatus.designer.cs">
+      <DependentUpon>202001041328071_OrderDetailStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ContextB\ConfigB.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />
+    <Compile Include="Models\OrderDetailDto.cs" />
+    <Compile Include="Models\OrderDto.cs" />
     <Compile Include="Models\OrderLocation.cs" />
     <Compile Include="Models\ShoppingCart\CartActions.cs" />
     <Compile Include="Models\ShoppingCart\Cart.cs" />
@@ -258,6 +280,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\app.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -267,6 +290,8 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-3.5.1.debug.js" />
+    <Content Include="Scripts\knockout-3.5.1.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -305,6 +330,7 @@
     <Content Include="Views\Order\YourOrderDetail.cshtml" />
     <Content Include="Views\Order\Delete.cshtml" />
     <Content Include="Views\Order\Edit.cshtml" />
+    <Content Include="Views\OrderService\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -355,6 +381,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ContextB\201912311942206_ItemImgAlt.resx">
       <DependentUpon>201912311942206_ItemImgAlt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ContextB\202001040819516_OrdernOrderDetail.resx">
+      <DependentUpon>202001040819516_OrdernOrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ContextB\202001041158463_OrderTable.resx">
+      <DependentUpon>202001041158463_OrderTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ContextB\202001041317502_Order2.resx">
+      <DependentUpon>202001041317502_Order2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ContextB\202001041328071_OrderDetailStatus.resx">
+      <DependentUpon>202001041328071_OrderDetailStatus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
