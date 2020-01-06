@@ -27,15 +27,15 @@
                         <p><span class="product_span">&pound; @item.Price</span></p>
                         @if (User.IsInRole("Admin"))
                         {
-                            <button type="button" role="button" aria-disabled="false" aria-describedby="Edit Item">@Html.ActionLink("Edit Item", "Index", "Item")</button>
+                            <button type="button" role="button" aria-pressed="false" aria-describedby="Edit Item">@Html.ActionLink("Edit Item", "Index", "Item")</button>
                         }
                         else if (User.IsInRole("Customer"))
                         {
-                            <button type="button" role="button" aria-disabled="false" aria-describedby="Add To Cart" onclick="AddToCart('@item.Id')" href="javascript:void(0);">Add to Cart</button>
+                            <button type="button" role="button" aria-pressed="false" aria-describedby="Add To Cart" onclick="AddToCart('@item.Id')" href="javascript:void(0);">Add to Cart</button>
                         }
                         else
                         {
-                            <button type="button" role="button" aria-disabled="false" aria-describedby="Sign-Up">@Html.ActionLink("Sign-Up", "Register", "Account")</button>
+                            <button type="button" role="button" aria-pressed="false" aria-describedby="Sign-Up">@Html.ActionLink("Sign-Up", "Register", "Account")</button>
                         }
                     </div>
                 </div>
