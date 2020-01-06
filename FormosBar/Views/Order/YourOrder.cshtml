@@ -6,32 +6,33 @@
 
 <h2>YourOrder</h2>
 
-<table class="table" aria-describedby="Your Order Table">
-    <thead>
-        <tr>
-            <th>UserName</th>
-            <th>Table Number</th>
-            <th>Detail</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TableNumber)
-            </td>
-            <td>
-                @Html.ActionLink("OrderDetail", "YourOrderDetail", new { Id = item.Id }, new { @class = "btn btn-success" })
-            </td>
-            <td>
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
-            </td>
-        </tr>
-        }
-    </tbody>
-</table>
+
+    <table class="table" aria-describedby="Your Order Table">
+        <thead>
+            <tr>
+                <th>UserName</th>
+                <th>Table Number</th>
+                <th>Detail</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TableNumber)
+                    </td>
+                    <td>
+                        @Html.ActionLink("OrderDetail", "YourOrderDetail", new { Id = item.Id }, new { @class = "btn btn-success" })
+                    </td>
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

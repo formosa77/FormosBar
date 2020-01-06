@@ -9,6 +9,7 @@ namespace FormosBar.Controllers
     public class OrderServiceController: Controller
     {
         // GET: Product
+        //Api Page
         public ActionResult Index()
         {
             return View();

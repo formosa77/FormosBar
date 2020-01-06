@@ -8,11 +8,14 @@ namespace FormosBar.Controllers
 {
     public class CartController : Controller
     {
+        //GET Cart
         public ActionResult GetCart()
         {
             return PartialView("_PartialCart");
         }
 
+
+        //Add Item to Cart
         public ActionResult AddToCart(int id)
         {
             var currentCart = Models.ShoppingCart.CartActions.CurrentShoppingCart();
@@ -20,6 +23,7 @@ namespace FormosBar.Controllers
             return PartialView("_PartialCart");
         }
 
+        //Remove Item From Cart
         public ActionResult RemoveFromCart(int id)
         {
             var currentCart = Models.ShoppingCart.CartActions.CurrentShoppingCart();
@@ -27,6 +31,7 @@ namespace FormosBar.Controllers
             return PartialView("_PartialCart");
         }
 
+        //Clear All Item From Cart
         public ActionResult ClearCart()
         {
             var currentCart = Models.ShoppingCart.CartActions.CurrentShoppingCart();

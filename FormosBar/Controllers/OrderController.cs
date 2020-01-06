@@ -23,6 +23,7 @@ namespace FormosBar.Controllers
             return View();
         }
 
+        //Add Order to DB and Add Related Order Detail to DB
         [Authorize(Roles = "Customer")]
         [HttpPost]
         public ActionResult Index(Models.OrderLocation postback, Nullable <int> OrderId)
@@ -58,30 +59,17 @@ namespace FormosBar.Controllers
                     return View("~/Views/Home/Index.cshtml");
                 }
             }
-            else {
+
+            //Handle Add-on Item
+            else
+            {
 
                 if (this.ModelState.IsValid)
                 {
                     var currentcart = Models.ShoppingCart.CartActions.CurrentShoppingCart();
-                    //var userId = HttpContext.User.Identity.GetUserId();
-                    //var userName = HttpContext.User.Identity.GetUserName();
 
                     using (DAL.BarContext db = new DAL.BarContext())
                     {
-                        //var order = new Models.Order()
-                        //{
-                        //    Id = OrderId.GetValueOrDefault();
-                        //};
-                        
-                        //var order = new Models.Order()
-                        //{
-                        //    UserId = userId,
-                        //    UserName = userName,
-                        //    TableNumber = postback.TableNumber,
-                        //};
-
-                        //db.Orders.Add(order);
-                        //db.SaveChanges();
 
                         var orderDetails = currentcart.ToOrderDetailList(OrderId.GetValueOrDefault());
 
@@ -97,6 +85,7 @@ namespace FormosBar.Controllers
             return View();
         }
 
+        //Customer View Own Order
         [Authorize(Roles = "Customer")]
         public ActionResult YourOrder()
         {
@@ -112,6 +101,7 @@ namespace FormosBar.Controllers
             }
         }
 
+        //Customer View Own Order Detail
         [Authorize(Roles = "Customer")]
         public ActionResult YourOrderDetail(int id)
         {
@@ -132,6 +122,7 @@ namespace FormosBar.Controllers
             }
         }
 
+        //Customer Delete Own Order
         [Authorize(Roles = "Customer")]
         public async Task<ActionResult> Delete(int? id)
         {

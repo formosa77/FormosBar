@@ -22,6 +22,7 @@ namespace FormosBar.Controllers
             }
         }
 
+        //Admin View Order Details
         [Authorize(Roles = "Admin")]
         public ActionResult Details(int id)
         {
@@ -42,6 +43,7 @@ namespace FormosBar.Controllers
             }
         }
 
+        //Admin View Order Details by Searching Function
         public ActionResult SerachByUserName(string UserName)
         {
             //string searchUserId = null;

@@ -8,18 +8,20 @@ namespace FormosBar.Controllers
 {
     public class HomeController : Controller
     {
+        //Index Page
         public ActionResult Index()
         {
             return View();
         }
 
+        //About Us Page
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
+        //Menu Page
         public ActionResult Menu()
         {
             using (DAL.BarContext db = new DAL.BarContext()) {
