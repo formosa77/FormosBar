@@ -1,4 +1,26 @@
 # FormosBar
+## Implementation 
+### Requirements
+1) Visual Studio 2017
+2) Microsoft SQL Server 2016 or above
+3) Entity Framework 6.0
+
+### Log-in Information To System
+1) **Administrator**
+   - User Name: Admin
+   - User PWD : Admin1234
+   
+2) **Customer 1**
+   - User Name: Peter
+   - User PWD : Peter1234
+   
+3) **Customer 2**
+   - User Name: Mary
+   - User PWD : Mary1234
+
+4) **Customer 3**
+   - User Name: Angel
+   - User PWD : Angel1234
 
 ## YouTube Video
 https://youtu.be/px11rRgxroE
