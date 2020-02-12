@@ -73,18 +73,18 @@ For the order/product management, administrator is required to log-in for review
 ## Additional Resources
 ### Images
 1) About Us's Image
-https://cdn.thegentlemansjournal.com/wp-content/uploads/2017/07/2-whisky-bars-whiskey-best-britain-gentlemans-journal-scotch-bourbon-900x600-c-center.jpg
+   - https://cdn.thegentlemansjournal.com/wp-content/uploads/2017/07/2-whisky-bars-whiskey-best-britain-gentlemans-journal-scotch-bourbon-900x600-c-center.jpg
 2) Jumbotron's Image
-https://www.lankwaifong.com/uploads/images/Article/LKF%20Whisky%20Bar%20Ginger%5B1%5D.jpg
+   - https://www.lankwaifong.com/uploads/images/Article/LKF%20Whisky%20Bar%20Ginger%5B1%5D.jpg
 3) Highlighted Drink's Image
-https://i.pinimg.com/originals/27/48/0d/27480db081da8462557ef97a97bf7fa4.jpg
+   - https://i.pinimg.com/originals/27/48/0d/27480db081da8462557ef97a97bf7fa4.jpg
 4) Highlighted Dishes's Image
-https://www.baliplus.com/wp-content/uploads/2019/07/MORTADELLA-PIZZA.jpg
+   - https://www.baliplus.com/wp-content/uploads/2019/07/MORTADELLA-PIZZA.jpg
 5) Food/Drink Image
-https://thepeak.com.my/wp-content/uploads/2017/09/Ao-Yun-7.jpg
-https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSw9wfUDwy-hg0E377T6p8Eptc8z-RrWRHFr_DGBM6yR6VCQb4G
-https://superscanner.nl/images/original/2/0/5/205582-14562-glenlivet-single-malt-scotch-whisky-18-years-400.jpeg
-https://media.karousell.com/media/photos/products/2019/01/21/lagavulin_16yo_1548084975_c60d3cf0.jpg
-https://www.baliplus.com/wp-content/uploads/2019/07/MORTADELLA-PIZZA.jpg
-https://www.196flavors.com/wp-content/uploads/2019/04/haggis-2-FP.jpg
-https://i.pinimg.com/originals/7b/6a/59/7b6a596432f00c3d5e3bf3f16fc2f6b2.jpg
+   - https://thepeak.com.my/wp-content/uploads/2017/09/Ao-Yun-7.jpg
+   - https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSw9wfUDwy-hg0E377T6p8Eptc8z-RrWRHFr_DGBM6yR6VCQb4G
+   - https://superscanner.nl/images/original/2/0/5/205582-14562-glenlivet-single-malt-scotch-whisky-18-years-400.jpeg
+   - https://media.karousell.com/media/photos/products/2019/01/21/lagavulin_16yo_1548084975_c60d3cf0.jpg
+   - https://www.baliplus.com/wp-content/uploads/2019/07/MORTADELLA-PIZZA.jpg
+   - https://www.196flavors.com/wp-content/uploads/2019/04/haggis-2-FP.jpg
+   - https://i.pinimg.com/originals/7b/6a/59/7b6a596432f00c3d5e3bf3f16fc2f6b2.jpg
